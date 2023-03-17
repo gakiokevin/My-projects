@@ -1,0 +1,73 @@
+.container {
+   border: 2px solid black;
+   border-radius: 20px solid black;
+   width: 20%;
+   height: 350px;
+   text-align: center;
+   position: relative;
+   top: 30px;
+   left:37%;
+   
+}
+#display {
+   height: 45px;
+   width: 250px;
+   padding-left: 6px;
+   padding-right:3px;
+   background-color: whitesmoke;
+   padding-bottom: 1rem;
+   color: black;
+   font-size: 1.2rem;
+   font-weight:bolder;
+   display: flex;
+   justify-content: flex-end;
+   align-items:end;
+   
+}
+h1 {
+   text-align: center;
+   color: red;
+}
+.buttoned {
+   display: flex;
+   background-color: red;
+   height: 280px;
+   margin-top: 3px;
+   padding-top: 5px;
+}
+.operands {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   height: 200px;
+   width: 150px;
+   background-color: darkslategray;
+
+   margin: 3px;
+   padding: 10px;
+}
+ .four-six, .one-three, .dot-to-equal, .seven-nine{
+   width: 150px;
+   height: auto;
+   display: flex;
+   font-size: larger;
+   font-weight: bold;
+   text-align: center;
+   justify-content: space-around;
+   padding-left: 15px;
+   padding: 7px;
+}
+.operators {
+   text-align: center;
+   background-color:gray;
+   display: flex;
+   flex-direction:column;
+   text-align: center;
+   font-weight: bold;
+   font-size: larger;
+   padding: 4px;
+   height: 214px;
+   width: 35px;
+   margin-top: 2.2px;
+   justify-content: space-around;
+}
