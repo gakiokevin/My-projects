@@ -5,9 +5,110 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>ROCK PAPER SCISSORS</title>
+   <style>
+      input {
+         height: 50px;
+         width: 60px;
+      }
+      .display {
+         width:100px;
+         height: 60px;
+      }
+   </style>
 </head>
 <body>
    <h1>ROCK PAPER SCISSORS</h1>
-   <script src="index.js"></script>
+
+   
+   
+   <input type="button" value="1" class="buttons">
+   <input type="button" value="2" class="buttons">
+   <input type="button" value="3" class="buttons">
+   <input type="button" value="+" class="buttons">
+   <input type="button" value="=" class="buttons">
+   <input type="button" value="/" class="buttons">
+   <input type="button" value="*" class="buttons">
+   <input type="button" value="-" class="buttons">
+   <input type="button" value="C" class="buttons">
+   
+   <div id="display"></div>
+   <script>
+      
+      let buttons  = document.querySelectorAll('.buttons');
+   
+      
+    let display = document.getElementById('display');
+      buttons.forEach( (button) =>{
+
+         function add(a,b){
+            return a+b;
+         }
+          display.textContent=""
+          button.addEventListener('click', weka)
+
+          function weka(){
+            if (button.value==="C"){
+               display.textContent=""
+            }
+            if(button.value==='='){
+               let result = display.textContent;
+                 let num = eval(result);
+                    display.textContent =num;
+           }
+            else if (button.value!=="C"){
+               display.textContent +=button.value;
+            }
+               
+               
+            
+
+             
+          }
+       }) //  button.addEventListener("click",display)
+     /*  function display(){
+       if (buttonValue==='C'){
+       display.textContent="";
+    }
+    if (buttonValue==="="){
+       if (buttonValue==="+"){
+         display.textContent=add(buttonValue,buttonValue);
+       }
+       if (buttonValue==="-"){
+         display.textContent=substract(buttonValue,buttonValue);
+       }
+       if (buttonValue==="*"){
+         display.textContent=multiply(buttonValue,buttonValue);
+       }
+       if (buttonValue==="/"){
+         display.textContent=divide(buttonValue,buttonValue);
+       }
+        if(buttonValue!=='C'){
+         display.textContent+=buttonValue;
+        }
+    }
+   
+   
+       function add(a,b){
+         return a + b;
+       }
+       function divide(a,b){
+         return a + b;
+       }
+       function multiply(a,b){
+         return a * b;
+       }
+       function substract(a,b){
+         return  a - b;
+       }
+   
+      }
+          
+   
+   
+   })*/
+   </script>
 </body>
 </html>
+
+
+   
