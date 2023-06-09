@@ -1,0 +1,24 @@
+ div {
+   height: 30px;
+   width:30px;
+   gap:10px;
+   margin: 2px;
+   background-color: antiquewhite;
+ }
+ .school {
+   height:100px;
+   margin-top: 50px;
+   width:100px;
+   border-radius: 50%;
+   background-color: red;
+ }
+
+ #colorChange {
+   position: relative;
+   left:500px;
+ }
+ #display {
+   width:400px;
+   height:60px;
+   background-color: darkgray;
+ }

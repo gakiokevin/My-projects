@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Window</title>
+   <style>
+      table,tr,th{
+         border: 2px solid red;
+         width: 600px;
+         border-collapse: collapse;
+      }
+   </style>
+</head>
+<body>
+  
+ <!---<div id="square" style="width:100px;height:100px;background-color:grey">Click</div>
+   <button>Button 1</button>
+   <button>Button 2</button>
+   <button>Button 3</button><br>
+ -->
+   <h1>Online Voting System</h1>
+   <input type="text" value="" id="addFriend">
+   <input type="button" value="addNew" id="addNew">
+   
+   <table id="output">
+      <tr>
+         <th>Number</th>
+         <th>Name</th>
+         <th>Votes</th>
+      </tr>
+   </table>
+   <script>
+      let myArray=[];
+       let addNew= document.getElementById('addNew');
+       let addFriend= document.getElementById('addFriend');
+       let table = document.getElementById('output');
+        addNew.addEventListener('click', addName);
+        function addName(){
+         if(addFriend.value!==""){
+      myArray.push(addFriend.value);
+      
+      
+      let count =0;
+      let row= document.createElement('tr')
+      let data1= document.createElement('td')
+     let data2= document.createElement('td')
+     let data3= document.createElement('td')
+      data1.style.borderCollapse='collapse'
+      data2.style.borderCollapse='collapse'
+      data3.style.borderCollapse='collapse'
+      data1.style.border='2px solid red'
+      data2.style.border='2px solid red'
+      data3.style.border='2px solid red'
+      row.style.borderCollapse='collapse';
+     row.style.border='2px solid red';
+      row.appendChild(data1)
+      row.appendChild(data2)
+      row.appendChild(data3)
+      table.appendChild(row);
+      
+      
+   myArray.forEach(addContent);
+   function addContent(element,index){
+      data1.textContent=index+1;
+       data2.textContent=element;
+      data3.textContent=count;
+      addFriend.value=" ";
+   }
+
+      row.addEventListener('click',addVotes);
+   function addVotes() {
+      count++;
+      data3.textContent=count;
+   
+    }
+         }
+      }
+   
+   
+   
+   
+   
+    
+   
+    
+   let valid = /[a-zA-Z0-9_]+@[a-zA-Z0-9]+\.[a-zA-Z0-9_]+/g;
+   let email=' gakiokevi_n5@gmail.com';
+   if(email.match(valid)){
+      console.log(" valid email "+email);
+   }else {
+      console.log(" invalid email")
+   }
+
+
+/*
+      window.onload = function () {
+         document.getElementById('square').addEventListener('click',changeBackgroundColor);
+         function changeBackgroundColor(){
+            let red = Math.floor(Math.random()* 256);
+            let green = Math.floor(Math.random()* 256);
+            let blue =  Math.floor(Math.random()* 256);
+            this.style.backgroundColor = `rgb(${red}, ${green}, ${blue})`
+
+         }
+      }
+
+         let buttons = document.querySelectorAll('button');
+          for (j=0; j<buttons.length;j++){
+            buttons[j].addEventListener('click', output);
+             function output(){
+               console.log(this.textContent);
+               
+             }
+          }*/
+   </script>
+</body>
+</html>

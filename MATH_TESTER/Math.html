@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Math APP</title>
+   <style>
+      body {
+         margin: 0;
+         padding:0;
+         width:100vw;
+         height: 100vh;
+         overflow-x: hidden;
+         background: beige;
+         
+      }
+      .container {
+         position: relative;
+         top: 10px;
+         left:2px;
+         margin: 5px 6px;
+         margin-left: 1;
+         width:96%;
+         background: darkseagreen;
+         height:70%;
+         text-align: center;
+         z-index:1;
+         border: 2px solid silver;
+         border-radius:5px;
+         display: none;
+         animation: animate 1s ease-in-out;
+         z-index:1;
+      }
+
+       @keyframes animate{
+         from {
+            transform: scale(0);
+         }
+         to {
+            transform: scale(1);
+         }
+       }
+
+       
+      #login {
+         background: #48d1cc;
+         color:white;
+         padding:10px 20px;
+         margin:8px 5px;
+         border: none;
+         cursor: pointer;
+         height:2.2rem;
+         text-align: center;
+         position: relative;
+         top:50px;
+         left:40%;
+      }
+      .operation {
+         display: flex;
+         align-items: center;
+         
+         width:70%;
+         padding:5px 2px;
+         margin:10px 50px;
+         height:100px;
+         background: ghostwhite;
+      }
+      .operation div {
+         width:40px;
+         height:25px;
+         color: white;
+         border:2px solid red;
+         background: grey;
+         padding: 5px;
+         margin: 3px;
+         text-align: center;
+         font-size: large;
+         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+         transition:all 300ms
+      }
+      input {
+         width:60px;
+         height:35px;
+         text-align: center;
+         border: none;
+         color:grey;
+         margin-left:7px;
+         border: 1px solid #ddd;
+         transition: all 300ms;
+      }
+      #progress {
+         height:20px;
+         display: none;
+         background: rgb(133, 224, 224);
+         margin:5px;
+         position: absolute;
+         bottom:60px;
+         left:35px;
+         color:white;
+         padding:10px 3px;
+         font-size: .8rem;
+         transition: all 3ms ease;
+
+      }
+      
+   </style>
+   <body>
+
+<div class="container" id="container">
+   <h2>Brain Tester</h2>
+   <div class="operation">
+   <div id="first-operand"></div>
+   <div id="operator">+</div>
+   <div id="second-operand"></div>
+   <div>=</div>
+   <input type="text" id="myInput">
+   </div>
+    <button id="compare">check</button>
+    <div id="progress"></div>
+</div>
+<button id="login">Start</button>
+   <script src="./math.js"></script>
+</body>
+</html>
